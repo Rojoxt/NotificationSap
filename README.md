@@ -50,12 +50,22 @@ $ npm install
 Crear un archivo `.env` en la raíz del proyecto con las siguientes variables:
 
 ```env
-DB2_HOST=host
-DB2_PORT=port
-DB2_DATABASE=database
-DB2_USER=user
-DB2_PASSWORD=password
-JWT_SECRET=your-secret-key
+AS400_ODBC_DRIVER_NAME="{iSeries Access ODBC Driver}"
+AS400_SYSTEM_IP=# Dirección IP o nombre de host del AS/400
+
+# Credenciales
+AS400_USERNAME=usuario
+AS400_PASSWORD=contraseña
+
+# Configuración adicional del DB2
+# Naming=1 (System Naming, *SYS) o Naming=0 (SQL Naming, *SQL)
+AS400_NAMING_CONVENTION=1
+AS400_DEFAULT_LIBRARIES=añadir librerias que necesite db2,
+
+MONITOR_URL=url del mointoreo de la api
+
+JWT_SECRET=jwt secret
+USER_GENERATOR=*
 ```
 
 ## Scripts Disponibles
