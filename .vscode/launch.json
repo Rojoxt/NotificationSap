@@ -1,0 +1,21 @@
+// .vscode/launch.json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug NestJS",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "start:debug" // 👈 Usa el script de debug que definiste arriba
+      ],
+      "console": "integratedTerminal",
+      "protocol": "inspector",
+      // Opcional: Ignorar código que no es tuyo
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"], 
+      "restart": true
+    }
+  ]
+}
